@@ -9,7 +9,7 @@ public class BaseTest {
     String user, password;
 
     @BeforeClass
-    public void setUp( ) {
+    public void setUp() {
         Configuration.baseUrl = PropertyReader.getProperty("QASE_URL","qase.url");
         user = System.getenv().getOrDefault("QASE_USER", PropertyReader.getProperty("qase.user"));
         password = System.getenv().getOrDefault("QASE_PASSWORD", PropertyReader.getProperty("qase.password"));
