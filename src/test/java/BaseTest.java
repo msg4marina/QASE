@@ -2,7 +2,6 @@ import com.codeborne.selenide.Configuration;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import utils.PropertyReader;
-
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class BaseTest {
@@ -16,7 +15,7 @@ public class BaseTest {
 
         Configuration.browser = "chrome";
         Configuration.clickViaJs = true;
-        Configuration.headless = Boolean.getBoolean(PropertyReader.getProperty("headledd"));
+        Configuration.headless = Boolean.getBoolean(PropertyReader.getProperty("headless"));
         Configuration.startMaximized = true;
         Configuration.timeout = 10000;
         /*ChromeOptions chromeOptions = new ChromeOptions();
@@ -25,7 +24,7 @@ public class BaseTest {
     }
 
     @AfterClass(alwaysRun = true)
-    public void tearDown( ) {
+    public void tearDown() {
         getWebDriver().quit();
     }
 }
