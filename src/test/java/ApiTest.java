@@ -15,7 +15,6 @@ public class ApiTest {
                 post("https://api.qase.io/v1/project").
         then().
                 statusCode(200).
-                body("errorMessage", equalTo("Data is invalid"),
-        "errorMessage", hasItems(1,23));
+                body("errorMessage", equalTo("Data is invalid"));
     }
 }
